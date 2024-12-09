@@ -195,28 +195,20 @@ if selected == "Info-Hub":
         st.header("Demo Video")
         with st.container(border=True):
             st.video("https://www.youtube.com/watch?v=DaCe4OgAmyQ")
-            # try:
-            #     response = requests.get("https://github.com/suprithvasista/SuprithM_Portfolio/blob/main/assets/DataBricks.png?raw=true")
-            #     response.raise_for_status()
-            #     data = response.content,
-            #     file_name = "pdf",
-            #     st.download_button(":material/download:",data,file_name)
-            # except requests.exceptions.RequestException as e:
-            #     st.error(f"Error fetching the file: {e}")
-            # col1, col2 = st.columns([10, 1], gap="medium", vertical_alignment="center")
-            # file_paths=["PortfolioGenration_Doc.pdf","Portfolio_Generator_Presentation.pptx"]
-            # for i in file_paths:
-            #     with col1:
-            #         st.markdown("""
-            #         <style>
-            #             write {
-            #                 height:5px;
-            #             }
-            #         </style>
-            #         """, unsafe_allow_html=True)
-            #         st.write(':page_facing_up:', i)
-            #     with col2:
-            #         a = st.download_button(':material/download:', key=i, use_container_width=False)
-                    # if a:
-                    #     call_back_values(j)
-                    #     st.rerun()
+            url_tech_doc="https://github.com/suprithvasista/Portfolio_Generator_Enhancer/blob/main/documents/"
+            file_names=["PortfolioGenration_Doc.pdf","Portfolio_Generator_Presentation.pptx" ]
+            ext_param="?raw=true"
+            st.subheader("Documentation")
+            col1, col2 = st.columns([10, 1], gap="medium", vertical_alignment="center")
+            for i in file_names:
+                with col1:
+                    st.markdown("""
+                    <style>
+                        write {
+                            height:5px;
+                        }
+                    </style>
+                    """, unsafe_allow_html=True)
+                    st.write(':page_facing_up:', i)
+                with col2:
+                    st.link_button(':material/download:',url=url_tech_doc+i+ext_param, use_container_width=False)
