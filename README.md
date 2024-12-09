@@ -1,9 +1,7 @@
 # Portfolio_Generator_Enhancer
 
-To deploy
-
 Check out the application here:
-  
+  https://portfolio-generator-enhancer.streamlit.app
 
 1. Introduction
   This application is built using Streamlit, a Python framework for creating auto generation of flutter based web portfolio’s. The goal of the application is to facilitate the   creation , deployment and management of portfolio projects.
@@ -88,3 +86,11 @@ Info-Hub Section:
     Customization: Developers building apps or websites often need to customize the UI colors and layout. This app allows users to pick their theme colors and generate the                        necessary code to integrate it into a Flutter project, reducing manual coding.
     User-Friendly Experience: By leveraging Streamlit, the app provides an intuitive interface that even users with limited technical expertise can navigate. The app also                                    provides helpful guides and tooltips, making it easier for users to follow through on complex tasks like creating GitHub and Vercel tokens.
     Scalability for Multiple User: The application can be used by multiple users, making it ideal for project teams. It simplifies collaborative processes such as project                                         deployment, GitHub repo management, and profile building.
+
+
+To deploy the code yourself there are few steps need to be follwed:
+    The environment variables should be set in the environment as follows:
+      GOOGLE_APPLICATION_CREDENTIALS="your gcp api token which should be encoded into base64"
+      mail_id_token="your mail id"
+      mail_auth_token="mail authorization token"
+      ver_api_key_val="your vercel api key"    
