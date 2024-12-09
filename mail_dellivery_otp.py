@@ -13,9 +13,10 @@ def generate_otp(length=6):
 def send_otp(email, otp):
     # Email server configuration
     mail_auth_token_value = os.getenv("mail_auth_token")
+    mail_id_auth_value = os.getenv("mail_id_token")
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
-    sender_email = 'vasistatech19@gmail.com'
+    sender_email = mail_id_auth_value
     sender_password = mail_auth_token_value
 
     # Create the email content
